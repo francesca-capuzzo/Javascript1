@@ -334,3 +334,54 @@ while (true) {
     y+=1
 }
 
+
+
+//*********************************************************************************
+// SWITCH:
+
+//gli switch servono per eliminare i vari IF e IF ELSE e rendere il codice più leggibile!!
+
+let type = 0;
+
+switch (type) {
+    case 0:
+        console.log("Hai comprato un cosmetico");
+        break;
+    case 1:
+        console.log("Hai comprato un balsamo");
+        break;
+    case 2:
+        console.log("Hai comprato uno shampoo");
+        break;
+    default:
+        console.log("Errore di tipologia");
+        break;
+}
+//risultato è 0 "Hai comprato un cosmetico" - cambiando il TYPE cambierà il log alla console ed un valore non accettato andrà direttamente al default.
+
+let kind = 0;
+
+switch (kind) {
+    case kind > 10:
+        console.log("Hai comprato un cosmetico");
+        break;
+    case kind > 20:
+        console.log("Hai comprato un balsamo");
+        break;
+    case 2:
+        console.log("Hai comprato uno shampoo");
+        break;
+    default:
+        console.log("Errore di tipologia");
+        break;
+}
+
+
+// let value = 8;
+
+// switch (value) {
+//     case (value % 2 ===0):
+//         console.log("pari");
+//     case (value % 3 ===0):
+//         console.log("dispari");
+// } NON FUNZIONA PER ADESSO

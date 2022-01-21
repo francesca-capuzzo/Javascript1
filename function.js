@@ -193,7 +193,7 @@ console.log(result);
 
 //************************************************************************************************
 
-//FUNZIONI CHE RITORNANO ALTRE FUNZIONI:
+//FUNZIONI CHE RITORNANO ALTRE FUNZIONI: (HIGH ORDER FUNCTION)
 
 function multiplyByNumber(moltiplicatore) {
     return (number) => number * moltiplicatore;
@@ -208,3 +208,28 @@ console.log(moltiplicaPer2(5));
 console.log(moltiplicaPer3(5));
 console.log(moltiplicaPer4(5));
 console.log(moltiplicaPer5(5));
+
+
+//************************************************************************************************
+
+//FUNZIONI CHE "mangiano" ALTRE FUNZIONI: (E LE USANO AL LORO INTERNO)
+
+
+function applicaFunzioneSuNumero(mioNumero, funzioneDaApplicare) {
+    return funzioneDaApplicare(mioNumero);
+}
+
+function dividiPer2(numero) {
+    return numero / 2;
+}
+
+function dividiPer3(numero) {
+    return numero / 3;
+}
+
+
+let risultato1 = applicaFunzioneSuNumero(8, dividiPer2) //RISULTATO = 4
+console.log(risultato1);
+
+let risultato2 = applicaFunzioneSuNumero(8, dividiPer3) //RISULTATO = 2.66666666
+console.log(risultato2);
